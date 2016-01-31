@@ -1,0 +1,8 @@
+<div id="svg-field">
+  <svg ng-attr-width="{{fieldWidth}}" ng-attr-height="{{fieldHeight}}">
+  	<g ng-repeat="elem in elements">
+  		<circle ng-attr-cx="{{elem.x}}" ng-attr-cy="{{elem.y}}" r="6" stroke="black" stroke-width="2" fill="transparent"></circle>
+  	</g>
+  	<path stroke="blue" fill="none" ng-attr-d="{{path}}"></path>
+  </svg>
+</div>
