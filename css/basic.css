@@ -21,4 +21,6 @@ html, body{
     margin: 0 auto;
     border: 1px solid grey;
     box-sizing: border-box;
+    overflow: visible;
+    margin-top: 20px;
 }

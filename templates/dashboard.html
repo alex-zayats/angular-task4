@@ -1,8 +1,14 @@
 <div id="svg-field">
   <svg ng-attr-width="{{fieldWidth}}" ng-attr-height="{{fieldHeight}}">
-  	<g ng-repeat="elem in elements">
-  		<circle ng-attr-cx="{{elem.x}}" ng-attr-cy="{{elem.y}}" r="6" stroke="black" stroke-width="2" fill="transparent"></circle>
+    <path stroke-width="2" stroke="blue" fill="none" ng-attr-d="{{path}}"></path>
+  	<g>
+  	   <circle ng-repeat="elem in elements" ng-attr-cx="{{elem.x}}" ng-attr-cy="{{elem.y}}" r="6" stroke="black" stroke-width="2" fill="#F7F6F6"></circle>
   	</g>
-  	<path stroke="blue" fill="none" ng-attr-d="{{path}}"></path>
+  	<g font-size="13px" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
+	    <text ng-repeat="label in labelsY" ng-attr-y="{{label.y}}" x="-20">{{label.value}}</text>
+  	</g>
+  	<g font-size="13px" font-family="sans-serif" fill="black" stroke="none" text-anchor="middle">
+	    <text ng-repeat="label in labelsX" ng-attr-x="{{label.x}}" y="520">{{label.value}}</text>
+  	</g>
   </svg>
 </div>
